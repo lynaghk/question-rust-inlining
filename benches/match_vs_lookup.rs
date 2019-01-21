@@ -33,55 +33,30 @@ fn match8(x: u8) -> u64 {
     }
 }
 
-use lazy_static::lazy_static;
-lazy_static! {
-    static ref LOOKUP2: [u64; 256] = {
-        let mut l = [0; 256];
-
-        l[b'A' as usize] = 1;
-        l[b'B' as usize] = 2;
-
-        l
-    };
-    static ref LOOKUP4: [u64; 256] = {
-        let mut l = [0; 256];
-
-        l[b'A' as usize] = 1;
-        l[b'B' as usize] = 2;
-        l[b'C' as usize] = 3;
-        l[b'D' as usize] = 4;
-
-        l
-    };
-    static ref LOOKUP8: [u64; 256] = {
-        let mut l = [0; 256];
-
-        l[b'A' as usize] = 1;
-        l[b'B' as usize] = 2;
-        l[b'C' as usize] = 3;
-        l[b'D' as usize] = 4;
-        l[b'E' as usize] = 5;
-        l[b'F' as usize] = 6;
-        l[b'G' as usize] = 7;
-        l[b'H' as usize] = 8;
-
-        l
-    };
-}
+const LOOKUP: [u64; 256] = [
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    1, 2, 3, 4, 5, 6, 7, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+];
 
 #[inline(always)]
 fn lookup2(x: u8) -> u64 {
-    LOOKUP2[x as usize]
+    LOOKUP[x as usize]
 }
 
 #[inline(always)]
 fn lookup4(x: u8) -> u64 {
-    LOOKUP4[x as usize]
+    LOOKUP[x as usize]
 }
 
 #[inline(always)]
 fn lookup8(x: u8) -> u64 {
-    LOOKUP8[x as usize]
+    LOOKUP[x as usize]
 }
 
 use criterion::{criterion_group, criterion_main, Bencher, Criterion};
