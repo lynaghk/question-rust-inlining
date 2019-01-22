@@ -1,0 +1,409 @@
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+Gnuplot not found, disabling plotting
+Benchmarking sum,match,f,2
+Benchmarking sum,match,f,2: Warming up for 3.0000 s
+Benchmarking sum,match,f,2: Collecting 100 samples in estimated 5.0565 s (227k iterations)
+Benchmarking sum,match,f,2: Analyzing
+sum,match,f,2           time:   [21.773 us 22.035 us 22.320 us]
+                        change: [-56.555% -54.496% -52.362%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 19 outliers among 100 measurements (19.00%)
+  6 (6.00%) high mild
+  13 (13.00%) high severe
+
+Benchmarking mix,match,f,2
+Benchmarking mix,match,f,2: Warming up for 3.0000 s
+Benchmarking mix,match,f,2: Collecting 100 samples in estimated 5.3343 s (61k iterations)
+Benchmarking mix,match,f,2: Analyzing
+mix,match,f,2           time:   [86.202 us 87.003 us 87.937 us]
+                        change: [-66.978% -64.807% -62.520%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 20 outliers among 100 measurements (20.00%)
+  4 (4.00%) high mild
+  16 (16.00%) high severe
+
+Benchmarking mix rotate,match,f,2
+Benchmarking mix rotate,match,f,2: Warming up for 3.0000 s
+Benchmarking mix rotate,match,f,2: Collecting 100 samples in estimated 5.5105 s (50k iterations)
+Benchmarking mix rotate,match,f,2: Analyzing
+mix rotate,match,f,2    time:   [108.55 us 110.01 us 111.72 us]
+                        change: [-74.073% -71.911% -69.631%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 9 outliers among 100 measurements (9.00%)
+  6 (6.00%) high mild
+  3 (3.00%) high severe
+
+Benchmarking sum,lookup,f,2
+Benchmarking sum,lookup,f,2: Warming up for 3.0000 s
+Benchmarking sum,lookup,f,2: Collecting 100 samples in estimated 5.0437 s (202k iterations)
+Benchmarking sum,lookup,f,2: Analyzing
+sum,lookup,f,2          time:   [24.956 us 25.268 us 25.608 us]
+                        change: [-49.978% -45.511% -40.932%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 18 outliers among 100 measurements (18.00%)
+  6 (6.00%) high mild
+  12 (12.00%) high severe
+
+Benchmarking mix,lookup,f,2
+Benchmarking mix,lookup,f,2: Warming up for 3.0000 s
+Benchmarking mix,lookup,f,2: Collecting 100 samples in estimated 5.0660 s (50k iterations)
+Benchmarking mix,lookup,f,2: Analyzing
+mix,lookup,f,2          time:   [98.013 us 99.158 us 100.40 us]
+                        change: [-9.0605% -7.2116% -5.3266%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 11 outliers among 100 measurements (11.00%)
+  9 (9.00%) high mild
+  2 (2.00%) high severe
+
+Benchmarking mix rotate,lookup,f,2
+Benchmarking mix rotate,lookup,f,2: Warming up for 3.0000 s
+Benchmarking mix rotate,lookup,f,2: Collecting 100 samples in estimated 5.2795 s (40k iterations)
+Benchmarking mix rotate,lookup,f,2: Analyzing
+mix rotate,lookup,f,2   time:   [129.23 us 130.52 us 131.89 us]
+                        change: [-5.7073% -3.3258% -0.6066%] (p = 0.01 < 0.05)
+                        Change within noise threshold.
+Found 7 outliers among 100 measurements (7.00%)
+  5 (5.00%) high mild
+  2 (2.00%) high severe
+
+Benchmarking sum,match,f,4
+Benchmarking sum,match,f,4: Warming up for 3.0000 s
+Benchmarking sum,match,f,4: Collecting 100 samples in estimated 5.0211 s (227k iterations)
+Benchmarking sum,match,f,4: Analyzing
+sum,match,f,4           time:   [21.703 us 21.974 us 22.283 us]
+                        change: [-3.3881% -2.1932% -1.0587%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 17 outliers among 100 measurements (17.00%)
+  3 (3.00%) high mild
+  14 (14.00%) high severe
+
+Benchmarking mix,match,f,4
+Benchmarking mix,match,f,4: Warming up for 3.0000 s
+Benchmarking mix,match,f,4: Collecting 100 samples in estimated 5.2588 s (61k iterations)
+Benchmarking mix,match,f,4: Analyzing
+mix,match,f,4           time:   [84.750 us 85.554 us 86.498 us]
+                        change: [-3.4640% -2.2407% -1.0323%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 17 outliers among 100 measurements (17.00%)
+  3 (3.00%) high mild
+  14 (14.00%) high severe
+
+Benchmarking mix rotate,match,f,4
+Benchmarking mix rotate,match,f,4: Warming up for 3.0000 s
+Benchmarking mix rotate,match,f,4: Collecting 100 samples in estimated 5.1056 s (50k iterations)
+Benchmarking mix rotate,match,f,4: Analyzing
+mix rotate,match,f,4    time:   [98.127 us 99.360 us 100.80 us]
+                        change: [-4.8199% -2.9730% -0.9563%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
+Found 18 outliers among 100 measurements (18.00%)
+  3 (3.00%) high mild
+  15 (15.00%) high severe
+
+Benchmarking sum,lookup,f,4
+Benchmarking sum,lookup,f,4: Warming up for 3.0000 s
+Benchmarking sum,lookup,f,4: Collecting 100 samples in estimated 5.0512 s (197k iterations)
+Benchmarking sum,lookup,f,4: Analyzing
+sum,lookup,f,4          time:   [25.253 us 25.530 us 25.876 us]
+                        change: [-3.3349% -1.9691% -0.4651%] (p = 0.01 < 0.05)
+                        Change within noise threshold.
+Found 6 outliers among 100 measurements (6.00%)
+  5 (5.00%) high mild
+  1 (1.00%) high severe
+
+Benchmarking mix,lookup,f,4
+Benchmarking mix,lookup,f,4: Warming up for 3.0000 s
+Benchmarking mix,lookup,f,4: Collecting 100 samples in estimated 5.1687 s (50k iterations)
+Benchmarking mix,lookup,f,4: Analyzing
+mix,lookup,f,4          time:   [98.497 us 99.804 us 101.71 us]
+                        change: [-5.8920% -3.5947% -1.4710%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 12 outliers among 100 measurements (12.00%)
+  3 (3.00%) high mild
+  9 (9.00%) high severe
+
+Benchmarking mix rotate,lookup,f,4
+Benchmarking mix rotate,lookup,f,4: Warming up for 3.0000 s
+Benchmarking mix rotate,lookup,f,4: Collecting 100 samples in estimated 5.3714 s (40k iterations)
+Benchmarking mix rotate,lookup,f,4: Analyzing
+mix rotate,lookup,f,4   time:   [129.50 us 130.94 us 132.51 us]
+                        change: [-3.5240% -1.8206% -0.0747%] (p = 0.04 < 0.05)
+                        Change within noise threshold.
+Found 7 outliers among 100 measurements (7.00%)
+  4 (4.00%) high mild
+  3 (3.00%) high severe
+
+Benchmarking sum,match,f,8
+Benchmarking sum,match,f,8: Warming up for 3.0000 s
+Benchmarking sum,match,f,8: Collecting 100 samples in estimated 5.0172 s (227k iterations)
+Benchmarking sum,match,f,8: Analyzing
+sum,match,f,8           time:   [21.626 us 21.795 us 21.982 us]
+                        change: [-2.8461% -1.5176% -0.1948%] (p = 0.03 < 0.05)
+                        Change within noise threshold.
+Found 17 outliers among 100 measurements (17.00%)
+  11 (11.00%) high mild
+  6 (6.00%) high severe
+
+Benchmarking mix,match,f,8
+Benchmarking mix,match,f,8: Warming up for 3.0000 s
+Benchmarking mix,match,f,8: Collecting 100 samples in estimated 5.2712 s (61k iterations)
+Benchmarking mix,match,f,8: Analyzing
+mix,match,f,8           time:   [85.335 us 86.204 us 87.157 us]
+                        change: [-2.3286% -0.6991% +0.9243%] (p = 0.40 > 0.05)
+                        No change in performance detected.
+Found 18 outliers among 100 measurements (18.00%)
+  8 (8.00%) high mild
+  10 (10.00%) high severe
+
+Benchmarking mix rotate,match,f,8
+Benchmarking mix rotate,match,f,8: Warming up for 3.0000 s
+Benchmarking mix rotate,match,f,8: Collecting 100 samples in estimated 5.1610 s (50k iterations)
+Benchmarking mix rotate,match,f,8: Analyzing
+mix rotate,match,f,8    time:   [98.027 us 99.036 us 100.18 us]
+                        change: [-2.6876% -0.7880% +1.0581%] (p = 0.43 > 0.05)
+                        No change in performance detected.
+Found 21 outliers among 100 measurements (21.00%)
+  10 (10.00%) high mild
+  11 (11.00%) high severe
+
+Benchmarking sum,lookup,f,8
+Benchmarking sum,lookup,f,8: Warming up for 3.0000 s
+Benchmarking sum,lookup,f,8: Collecting 100 samples in estimated 5.0620 s (202k iterations)
+Benchmarking sum,lookup,f,8: Analyzing
+sum,lookup,f,8          time:   [24.912 us 25.150 us 25.429 us]
+                        change: [-2.6219% -1.0202% +0.5787%] (p = 0.21 > 0.05)
+                        No change in performance detected.
+Found 12 outliers among 100 measurements (12.00%)
+  4 (4.00%) high mild
+  8 (8.00%) high severe
+
+Benchmarking mix,lookup,f,8
+Benchmarking mix,lookup,f,8: Warming up for 3.0000 s
+Benchmarking mix,lookup,f,8: Collecting 100 samples in estimated 5.2624 s (50k iterations)
+Benchmarking mix,lookup,f,8: Analyzing
+mix,lookup,f,8          time:   [100.13 us 100.98 us 101.95 us]
+                        change: [-1.2191% -0.0108% +1.2288%] (p = 0.99 > 0.05)
+                        No change in performance detected.
+Found 8 outliers among 100 measurements (8.00%)
+  6 (6.00%) high mild
+  2 (2.00%) high severe
+
+Benchmarking mix rotate,lookup,f,8
+Benchmarking mix rotate,lookup,f,8: Warming up for 3.0000 s
+Benchmarking mix rotate,lookup,f,8: Collecting 100 samples in estimated 5.4724 s (40k iterations)
+Benchmarking mix rotate,lookup,f,8: Analyzing
+mix rotate,lookup,f,8   time:   [130.01 us 131.49 us 133.16 us]
+                        change: [+0.2155% +1.5553% +2.8097%] (p = 0.02 < 0.05)
+                        Change within noise threshold.
+Found 14 outliers among 100 measurements (14.00%)
+  8 (8.00%) high mild
+  6 (6.00%) high severe
+
+Benchmarking sum,lookup,t,2
+Benchmarking sum,lookup,t,2: Warming up for 3.0000 s
+Benchmarking sum,lookup,t,2: Collecting 100 samples in estimated 5.0417 s (505k iterations)
+Benchmarking sum,lookup,t,2: Analyzing
+sum,lookup,t,2          time:   [9.7051 us 9.7940 us 9.8973 us]
+                        change: [-3.9700% -1.6208% +0.6569%] (p = 0.18 > 0.05)
+                        No change in performance detected.
+Found 20 outliers among 100 measurements (20.00%)
+  5 (5.00%) high mild
+  15 (15.00%) high severe
+
+Benchmarking sum,match,t,2
+Benchmarking sum,match,t,2: Warming up for 3.0000 s
+Benchmarking sum,match,t,2: Collecting 100 samples in estimated 5.0221 s (636k iterations)
+Benchmarking sum,match,t,2: Analyzing
+sum,match,t,2           time:   [7.7297 us 7.8152 us 7.9130 us]
+                        change: [-5.5974% -3.4737% -1.3259%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 18 outliers among 100 measurements (18.00%)
+  18 (18.00%) high severe
+
+Benchmarking mix,match,t,2
+Benchmarking mix,match,t,2: Warming up for 3.0000 s
+Benchmarking mix,match,t,2: Collecting 100 samples in estimated 5.0213 s (91k iterations)
+Benchmarking mix,match,t,2: Analyzing
+mix,match,t,2           time:   [54.033 us 54.571 us 55.159 us]
+                        change: [-0.6516% +0.7411% +2.2947%] (p = 0.33 > 0.05)
+                        No change in performance detected.
+Found 8 outliers among 100 measurements (8.00%)
+  4 (4.00%) high mild
+  4 (4.00%) high severe
+
+Benchmarking mix rotate,match,t,2
+Benchmarking mix rotate,match,t,2: Warming up for 3.0000 s
+Benchmarking mix rotate,match,t,2: Collecting 100 samples in estimated 5.3930 s (66k iterations)
+Benchmarking mix rotate,match,t,2: Analyzing
+mix rotate,match,t,2    time:   [81.019 us 81.872 us 82.837 us]
+                        change: [-3.4274% -1.8709% -0.3355%] (p = 0.02 < 0.05)
+                        Change within noise threshold.
+Found 18 outliers among 100 measurements (18.00%)
+  7 (7.00%) high mild
+  11 (11.00%) high severe
+
+Benchmarking mix,lookup,t,2
+Benchmarking mix,lookup,t,2: Warming up for 3.0000 s
+Benchmarking mix,lookup,t,2: Collecting 100 samples in estimated 5.0089 s (96k iterations)
+Benchmarking mix,lookup,t,2: Analyzing
+mix,lookup,t,2          time:   [51.956 us 52.560 us 53.197 us]
+                        change: [-2.3309% -0.9725% +0.3859%] (p = 0.17 > 0.05)
+                        No change in performance detected.
+Found 21 outliers among 100 measurements (21.00%)
+  15 (15.00%) high mild
+  6 (6.00%) high severe
+
+Benchmarking mix rotate,lookup,t,2
+Benchmarking mix rotate,lookup,t,2: Warming up for 3.0000 s
+Benchmarking mix rotate,lookup,t,2: Collecting 100 samples in estimated 5.2926 s (61k iterations)
+Benchmarking mix rotate,lookup,t,2: Analyzing
+mix rotate,lookup,t,2   time:   [83.037 us 84.073 us 85.189 us]
+                        change: [-1.7194% -0.3900% +0.9424%] (p = 0.57 > 0.05)
+                        No change in performance detected.
+Found 20 outliers among 100 measurements (20.00%)
+  6 (6.00%) high mild
+  14 (14.00%) high severe
+
+Benchmarking sum,lookup,t,4
+Benchmarking sum,lookup,t,4: Warming up for 3.0000 s
+Benchmarking sum,lookup,t,4: Collecting 100 samples in estimated 5.0387 s (505k iterations)
+Benchmarking sum,lookup,t,4: Analyzing
+sum,lookup,t,4          time:   [9.7119 us 9.8232 us 9.9516 us]
+                        change: [-0.4405% +1.2516% +2.8993%] (p = 0.14 > 0.05)
+                        No change in performance detected.
+Found 20 outliers among 100 measurements (20.00%)
+  1 (1.00%) high mild
+  19 (19.00%) high severe
+
+Benchmarking sum,match,t,4
+Benchmarking sum,match,t,4: Warming up for 3.0000 s
+Benchmarking sum,match,t,4: Collecting 100 samples in estimated 5.0336 s (682k iterations)
+Benchmarking sum,match,t,4: Analyzing
+sum,match,t,4           time:   [7.2319 us 7.2884 us 7.3522 us]
+                        change: [-2.0318% -1.0869% -0.1508%] (p = 0.02 < 0.05)
+                        Change within noise threshold.
+Found 13 outliers among 100 measurements (13.00%)
+  2 (2.00%) high mild
+  11 (11.00%) high severe
+
+Benchmarking mix,match,t,4
+Benchmarking mix,match,t,4: Warming up for 3.0000 s
+Benchmarking mix,match,t,4: Collecting 100 samples in estimated 5.0668 s (96k iterations)
+Benchmarking mix,match,t,4: Analyzing
+mix,match,t,4           time:   [52.445 us 53.061 us 53.699 us]
+                        change: [+0.4262% +1.6032% +2.8149%] (p = 0.01 < 0.05)
+                        Change within noise threshold.
+Found 7 outliers among 100 measurements (7.00%)
+  7 (7.00%) high mild
+
+Benchmarking mix rotate,match,t,4
+Benchmarking mix rotate,match,t,4: Warming up for 3.0000 s
+Benchmarking mix rotate,match,t,4: Collecting 100 samples in estimated 5.1363 s (45k iterations)
+Benchmarking mix rotate,match,t,4: Analyzing
+mix rotate,match,t,4    time:   [110.25 us 111.29 us 112.48 us]
+                        change: [-2.2067% -0.3559% +1.5253%] (p = 0.72 > 0.05)
+                        No change in performance detected.
+Found 22 outliers among 100 measurements (22.00%)
+  8 (8.00%) high mild
+  14 (14.00%) high severe
+
+Benchmarking mix,lookup,t,4
+Benchmarking mix,lookup,t,4: Warming up for 3.0000 s
+Benchmarking mix,lookup,t,4: Collecting 100 samples in estimated 5.0291 s (96k iterations)
+Benchmarking mix,lookup,t,4: Analyzing
+mix,lookup,t,4          time:   [51.817 us 53.174 us 55.387 us]
+                        change: [-1.7329% +0.9248% +4.3220%] (p = 0.59 > 0.05)
+                        No change in performance detected.
+Found 20 outliers among 100 measurements (20.00%)
+  9 (9.00%) high mild
+  11 (11.00%) high severe
+
+Benchmarking mix rotate,lookup,t,4
+Benchmarking mix rotate,lookup,t,4: Warming up for 3.0000 s
+Benchmarking mix rotate,lookup,t,4: Collecting 100 samples in estimated 5.1042 s (61k iterations)
+Benchmarking mix rotate,lookup,t,4: Analyzing
+mix rotate,lookup,t,4   time:   [82.418 us 83.423 us 84.609 us]
+                        change: [-1.7406% +0.5330% +3.1180%] (p = 0.68 > 0.05)
+                        No change in performance detected.
+Found 15 outliers among 100 measurements (15.00%)
+  4 (4.00%) high mild
+  11 (11.00%) high severe
+
+Benchmarking sum,lookup,t,8
+Benchmarking sum,lookup,t,8: Warming up for 3.0000 s
+Benchmarking sum,lookup,t,8: Collecting 100 samples in estimated 5.0361 s (510k iterations)
+Benchmarking sum,lookup,t,8: Analyzing
+sum,lookup,t,8          time:   [9.7536 us 9.8716 us 10.002 us]
+                        change: [-0.5723% +0.7262% +2.1135%] (p = 0.29 > 0.05)
+                        No change in performance detected.
+Found 19 outliers among 100 measurements (19.00%)
+  8 (8.00%) high mild
+  11 (11.00%) high severe
+
+Benchmarking sum,match,t,8
+Benchmarking sum,match,t,8: Warming up for 3.0000 s
+Benchmarking sum,match,t,8: Collecting 100 samples in estimated 5.0321 s (672k iterations)
+Benchmarking sum,match,t,8: Analyzing
+sum,match,t,8           time:   [7.2558 us 7.3427 us 7.4351 us]
+                        change: [-10.719% -7.3746% -4.3805%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 15 outliers among 100 measurements (15.00%)
+  15 (15.00%) high severe
+
+Benchmarking mix,match,t,8
+Benchmarking mix,match,t,8: Warming up for 3.0000 s
+Benchmarking mix,match,t,8: Collecting 100 samples in estimated 5.2183 s (96k iterations)
+Benchmarking mix,match,t,8: Analyzing
+mix,match,t,8           time:   [53.102 us 53.529 us 54.012 us]
+                        change: [-1.0095% +0.7296% +2.6449%] (p = 0.42 > 0.05)
+                        No change in performance detected.
+Found 20 outliers among 100 measurements (20.00%)
+  5 (5.00%) high mild
+  15 (15.00%) high severe
+
+Benchmarking mix rotate,match,t,8
+Benchmarking mix rotate,match,t,8: Warming up for 3.0000 s
+Benchmarking mix rotate,match,t,8: Collecting 100 samples in estimated 5.0983 s (45k iterations)
+Benchmarking mix rotate,match,t,8: Analyzing
+mix rotate,match,t,8    time:   [110.21 us 111.21 us 112.31 us]
+                        change: [-2.3666% -1.0502% +0.2713%] (p = 0.12 > 0.05)
+                        No change in performance detected.
+Found 19 outliers among 100 measurements (19.00%)
+  7 (7.00%) high mild
+  12 (12.00%) high severe
+
+Benchmarking mix,lookup,t,8
+Benchmarking mix,lookup,t,8: Warming up for 3.0000 s
+Benchmarking mix,lookup,t,8: Collecting 100 samples in estimated 5.0155 s (96k iterations)
+Benchmarking mix,lookup,t,8: Analyzing
+mix,lookup,t,8          time:   [51.169 us 51.557 us 52.061 us]
+                        change: [-3.4458% -1.1266% +1.1448%] (p = 0.35 > 0.05)
+                        No change in performance detected.
+Found 18 outliers among 100 measurements (18.00%)
+  3 (3.00%) high mild
+  15 (15.00%) high severe
+
+Benchmarking mix rotate,lookup,t,8
+Benchmarking mix rotate,lookup,t,8: Warming up for 3.0000 s
+Benchmarking mix rotate,lookup,t,8: Collecting 100 samples in estimated 5.3589 s (61k iterations)
+Benchmarking mix rotate,lookup,t,8: Analyzing
+mix rotate,lookup,t,8   time:   [83.533 us 84.661 us 85.870 us]
+                        change: [+0.0233% +1.3777% +2.7736%] (p = 0.05 < 0.05)
+                        Change within noise threshold.
+Found 5 outliers among 100 measurements (5.00%)
+  5 (5.00%) high mild
+
+Gnuplot not found, disabling plotting
