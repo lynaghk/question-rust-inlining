@@ -82,7 +82,7 @@ fn criterion_benchmark(c: &mut Criterion) {
             {
                 let s = s.clone();
                 c.bench_function(
-                    &format!("sum,{},not inline,{}", label, size),
+                    &format!("sum,{},f,{}", label, size),
                     move |b: &mut Bencher| {
                         b.iter(|| {
                             let mut sum = 0;
@@ -98,7 +98,7 @@ fn criterion_benchmark(c: &mut Criterion) {
             {
                 let s = s.clone();
                 c.bench_function(
-                    &format!("mix,{},not inline,{}", label, size),
+                    &format!("mix,{},f,{}", label, size),
                     move |b: &mut Bencher| {
                         b.iter(|| {
                             let mut out: u64 = 0;
@@ -116,7 +116,7 @@ fn criterion_benchmark(c: &mut Criterion) {
             {
                 let s = s.clone();
                 c.bench_function(
-                    &format!("mix with rotate,{},not inline,{}", label, size),
+                    &format!("mix rotate,{},f,{}", label, size),
                     move |b: &mut Bencher| {
                         b.iter(|| {
                             let mut out: u64 = 0;
@@ -139,7 +139,7 @@ fn criterion_benchmark(c: &mut Criterion) {
     {
         {
             let s = s2.clone();
-            c.bench_function("sum,lookup,inline,2", move |b: &mut Bencher| {
+            c.bench_function("sum,lookup,t,2", move |b: &mut Bencher| {
                 b.iter(|| {
                     let mut sum = 0;
                     for x in s.as_bytes() {
@@ -152,7 +152,7 @@ fn criterion_benchmark(c: &mut Criterion) {
 
         {
             let s = s2.clone();
-            c.bench_function("sum,match,inline,2", move |b: &mut Bencher| {
+            c.bench_function("sum,match,t,2", move |b: &mut Bencher| {
                 b.iter(|| {
                     let mut sum = 0;
                     for x in s.as_bytes() {
@@ -165,7 +165,7 @@ fn criterion_benchmark(c: &mut Criterion) {
 
         {
             let s = s2.clone();
-            c.bench_function("mix,match,inline,2", move |b: &mut Bencher| {
+            c.bench_function("mix,match,t,2", move |b: &mut Bencher| {
                 b.iter(|| {
                     let mut out: u64 = 0;
                     for idx in 0..1000 {
@@ -180,7 +180,7 @@ fn criterion_benchmark(c: &mut Criterion) {
 
         {
             let s = s2.clone();
-            c.bench_function("mix with rotate,match,inline,2", move |b: &mut Bencher| {
+            c.bench_function("mix rotate,match,t,2", move |b: &mut Bencher| {
                 b.iter(|| {
                     let mut out: u64 = 0;
                     for idx in 0..1000 {
@@ -195,7 +195,7 @@ fn criterion_benchmark(c: &mut Criterion) {
 
         {
             let s = s2.clone();
-            c.bench_function("mix,lookup,inline,2", move |b: &mut Bencher| {
+            c.bench_function("mix,lookup,t,2", move |b: &mut Bencher| {
                 b.iter(|| {
                     let mut out: u64 = 0;
                     for idx in 0..1000 {
@@ -210,7 +210,7 @@ fn criterion_benchmark(c: &mut Criterion) {
 
         {
             let s = s2.clone();
-            c.bench_function("mix with rotate,lookup,inline,2", move |b: &mut Bencher| {
+            c.bench_function("mix rotate,lookup,t,2", move |b: &mut Bencher| {
                 b.iter(|| {
                     let mut out: u64 = 0;
                     for idx in 0..1000 {
@@ -230,7 +230,7 @@ fn criterion_benchmark(c: &mut Criterion) {
     {
         {
             let s = s4.clone();
-            c.bench_function("sum,lookup,inline,4", move |b: &mut Bencher| {
+            c.bench_function("sum,lookup,t,4", move |b: &mut Bencher| {
                 b.iter(|| {
                     let mut sum = 0;
                     for x in s.as_bytes() {
@@ -243,7 +243,7 @@ fn criterion_benchmark(c: &mut Criterion) {
 
         {
             let s = s4.clone();
-            c.bench_function("sum,match,inline,4", move |b: &mut Bencher| {
+            c.bench_function("sum,match,t,4", move |b: &mut Bencher| {
                 b.iter(|| {
                     let mut sum = 0;
                     for x in s.as_bytes() {
@@ -256,7 +256,7 @@ fn criterion_benchmark(c: &mut Criterion) {
 
         {
             let s = s4.clone();
-            c.bench_function("mix,match,inline,4", move |b: &mut Bencher| {
+            c.bench_function("mix,match,t,4", move |b: &mut Bencher| {
                 b.iter(|| {
                     let mut out: u64 = 0;
                     for idx in 0..1000 {
@@ -271,7 +271,7 @@ fn criterion_benchmark(c: &mut Criterion) {
 
         {
             let s = s4.clone();
-            c.bench_function("mix with rotate,match,inline,4", move |b: &mut Bencher| {
+            c.bench_function("mix rotate,match,t,4", move |b: &mut Bencher| {
                 b.iter(|| {
                     let mut out: u64 = 0;
                     for idx in 0..1000 {
@@ -286,7 +286,7 @@ fn criterion_benchmark(c: &mut Criterion) {
 
         {
             let s = s4.clone();
-            c.bench_function("mix,lookup,inline,4", move |b: &mut Bencher| {
+            c.bench_function("mix,lookup,t,4", move |b: &mut Bencher| {
                 b.iter(|| {
                     let mut out: u64 = 0;
                     for idx in 0..1000 {
@@ -301,7 +301,7 @@ fn criterion_benchmark(c: &mut Criterion) {
 
         {
             let s = s4.clone();
-            c.bench_function("mix with rotate,lookup,inline,4", move |b: &mut Bencher| {
+            c.bench_function("mix rotate,lookup,t,4", move |b: &mut Bencher| {
                 b.iter(|| {
                     let mut out: u64 = 0;
                     for idx in 0..1000 {
@@ -320,7 +320,7 @@ fn criterion_benchmark(c: &mut Criterion) {
     {
         {
             let s = s8.clone();
-            c.bench_function("sum,lookup,inline,8", move |b: &mut Bencher| {
+            c.bench_function("sum,lookup,t,8", move |b: &mut Bencher| {
                 b.iter(|| {
                     let mut sum = 0;
                     for x in s.as_bytes() {
@@ -333,7 +333,7 @@ fn criterion_benchmark(c: &mut Criterion) {
 
         {
             let s = s8.clone();
-            c.bench_function("sum,match,inline,8", move |b: &mut Bencher| {
+            c.bench_function("sum,match,t,8", move |b: &mut Bencher| {
                 b.iter(|| {
                     let mut sum = 0;
                     for x in s.as_bytes() {
@@ -346,7 +346,7 @@ fn criterion_benchmark(c: &mut Criterion) {
 
         {
             let s = s8.clone();
-            c.bench_function("mix,match,inline,8", move |b: &mut Bencher| {
+            c.bench_function("mix,match,t,8", move |b: &mut Bencher| {
                 b.iter(|| {
                     let mut out: u64 = 0;
                     for idx in 0..1000 {
@@ -361,7 +361,7 @@ fn criterion_benchmark(c: &mut Criterion) {
 
         {
             let s = s8.clone();
-            c.bench_function("mix with rotate,match,inline,8", move |b: &mut Bencher| {
+            c.bench_function("mix rotate,match,t,8", move |b: &mut Bencher| {
                 b.iter(|| {
                     let mut out: u64 = 0;
                     for idx in 0..1000 {
@@ -376,7 +376,7 @@ fn criterion_benchmark(c: &mut Criterion) {
 
         {
             let s = s8.clone();
-            c.bench_function("mix,lookup,inline,8", move |b: &mut Bencher| {
+            c.bench_function("mix,lookup,t,8", move |b: &mut Bencher| {
                 b.iter(|| {
                     let mut out: u64 = 0;
                     for idx in 0..1000 {
@@ -391,7 +391,7 @@ fn criterion_benchmark(c: &mut Criterion) {
 
         {
             let s = s8.clone();
-            c.bench_function("mix with rotate,lookup,inline,8", move |b: &mut Bencher| {
+            c.bench_function("mix rotate,lookup,t,8", move |b: &mut Bencher| {
                 b.iter(|| {
                     let mut out: u64 = 0;
                     for idx in 0..1000 {

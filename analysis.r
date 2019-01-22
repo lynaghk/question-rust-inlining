@@ -3,48 +3,53 @@ library(tidyverse)
 
 # I "imported" this data from the benchmark output via emacs.
 d = tribble(
-    ~task             , ~f      , ~is_inline  , ~n , ~v_lower , ~v     , ~v_upper ,
-    "sum"             ,"match"  ,"not inline" ,2   , 19.752   , 20.207 , 20.780   ,
-    "mix"             ,"match"  ,"not inline" ,2   , 87.161   , 88.192 , 89.239   ,
-    "mix with rotate" ,"match"  ,"not inline" ,2   , 92.997   , 94.053 , 95.211   ,
-    "sum"             ,"lookup" ,"not inline" ,2   , 23.311   , 23.727 , 24.183   ,
-    "mix"             ,"lookup" ,"not inline" ,2   , 97.522   , 98.905 , 100.46   ,
-    "mix with rotate" ,"lookup" ,"not inline" ,2   , 112.45   , 114.58 , 117.27   ,
-    "sum"             ,"match"  ,"not inline" ,4   , 18.941   , 19.167 , 19.401   ,
-    "mix"             ,"match"  ,"not inline" ,4   , 90.858   , 92.001 , 93.257   ,
-    "mix with rotate" ,"match"  ,"not inline" ,4   , 89.939   , 91.152 , 92.398   ,
-    "sum"             ,"lookup" ,"not inline" ,4   , 22.309   , 22.610 , 22.942   ,
-    "mix"             ,"lookup" ,"not inline" ,4   , 96.845   , 97.876 , 99.013   ,
-    "mix with rotate" ,"lookup" ,"not inline" ,4   , 113.15   , 114.51 , 115.97   ,
-    "sum"             ,"match"  ,"not inline" ,8   , 18.955   , 19.242 , 19.568   ,
-    "mix"             ,"match"  ,"not inline" ,8   , 90.184   , 91.269 , 92.419   ,
-    "mix with rotate" ,"match"  ,"not inline" ,8   , 90.291   , 91.211 , 92.133   ,
-    "sum"             ,"lookup" ,"not inline" ,8   , 22.041   , 22.557 , 23.305   ,
-    "mix"             ,"lookup" ,"not inline" ,8   , 97.027   , 97.918 , 98.864   ,
-    "mix with rotate" ,"lookup" ,"not inline" ,8   , 110.73   , 111.97 , 113.27   ,
-    "sum"             ,"lookup" ,"inline"     ,2   , 9.9589   , 10.115 , 10.296   ,
-    "sum"             ,"match"  ,"inline"     ,2   , 0.0000   , 0.0000 , 0.0000   ,
-    "mix"             ,"match"  ,"inline"     ,2   , 50.704   , 51.331 , 52.031   ,
-    "mix with rotate" ,"match"  ,"inline"     ,2   , 62.849   , 63.510 , 64.178   ,
-    "mix"             ,"lookup" ,"inline"     ,2   , 52.181   , 52.727 , 53.314   ,
-    "mix with rotate" ,"lookup" ,"inline"     ,2   , 63.455   , 64.292 , 65.206   ,
-    "sum"             ,"lookup" ,"inline"     ,4   , 9.7954   , 9.8957 , 10.008   ,
-    "sum"             ,"match"  ,"inline"     ,4   , 7.4516   , 7.7460 , 8.1092   ,
-    "mix"             ,"match"  ,"inline"     ,4   , 52.345   , 53.138 , 54.018   ,
-    "mix with rotate" ,"match"  ,"inline"     ,4   , 62.313   , 62.855 , 63.405   ,
-    "mix"             ,"lookup" ,"inline"     ,4   , 52.487   , 53.182 , 53.922   ,
-    "mix with rotate" ,"lookup" ,"inline"     ,4   , 63.917   , 64.823 , 65.791   ,
-    "sum"             ,"lookup" ,"inline"     ,8   , 9.8150   , 9.9389 , 10.081   ,
-    "sum"             ,"match"  ,"inline"     ,8   , 7.4273   , 7.5272 , 7.6310   ,
-    "mix"             ,"match"  ,"inline"     ,8   , 52.257   , 52.895 , 53.582   ,
-    "mix with rotate" ,"match"  ,"inline"     ,8   , 61.617   , 62.514 , 63.599   ,
-    "mix"             ,"lookup" ,"inline"     ,8   , 52.400   , 53.002 , 53.616   ,
-    "mix with rotate" ,"lookup" ,"inline"     ,8   , 62.592   , 63.247 , 63.925
+    ~task        , ~f      , ~is_inline , ~n , ~v_lower , ~v     , ~v_upper ,
     
-) %>% mutate(task = factor(task, levels = c("sum", "mix", "mix with rotate"))
+    ## rustc 1.31.1 (b6c32da9b 2018-12-18)
+    "sum"        ,"match"  ,FALSE       ,2   , 16.243   , 16.407 , 16.601   ,
+    "mix"        ,"match"  ,FALSE       ,2   , 75.397   , 75.974 , 76.628   ,
+    "mix rotate" ,"match"  ,FALSE       ,2   , 108.87   , 109.98 , 111.14   ,
+    "sum"        ,"lookup" ,FALSE       ,2   , 18.349   , 18.498 , 18.673   ,
+    "mix"        ,"lookup" ,FALSE       ,2   , 75.035   , 75.791 , 76.653   ,
+    "mix rotate" ,"lookup" ,FALSE       ,2   , 98.692   , 99.878 , 101.23   ,
+    "sum"        ,"match"  ,FALSE       ,4   , 18.380   , 18.598 , 18.840   ,
+    "mix"        ,"match"  ,FALSE       ,4   , 80.316   , 81.651 , 83.101   ,
+    "mix rotate" ,"match"  ,FALSE       ,4   , 98.826   , 99.735 , 100.68   ,
+    "sum"        ,"lookup" ,FALSE       ,4   , 18.323   , 18.508 , 18.707   ,
+    "mix"        ,"lookup" ,FALSE       ,4   , 75.346   , 76.264 , 77.369   ,
+    "mix rotate" ,"lookup" ,FALSE       ,4   , 99.471   , 100.72 , 102.03   ,
+    "sum"        ,"match"  ,FALSE       ,8   , 18.414   , 18.599 , 18.795   ,
+    "mix"        ,"match"  ,FALSE       ,8   , 76.165   , 77.078 , 78.080   ,
+    "mix rotate" ,"match"  ,FALSE       ,8   , 106.76   , 107.52 , 108.38   ,
+    "sum"        ,"lookup" ,FALSE       ,8   , 18.306   , 18.444 , 18.598   ,
+    "mix"        ,"lookup" ,FALSE       ,8   , 75.546   , 76.542 , 77.652   ,
+    "mix rotate" ,"lookup" ,FALSE       ,8   , 98.814   , 100.01 , 101.33   ,
+    "sum"        ,"lookup" ,TRUE        ,2   , 3.1640   , 3.1895 , 3.2181   ,
+    "sum"        ,"match"  ,TRUE        ,2   , 7.8750   , 7.9657 , 8.0618   ,
+    "mix"        ,"match"  ,TRUE        ,2   , 53.822   , 54.358 , 54.937   ,
+    "mix rotate" ,"match"  ,TRUE        ,2   , 110.25   , 111.52 , 113.07   ,
+    "mix"        ,"lookup" ,TRUE        ,2   , 33.931   , 34.277 , 34.664   ,
+    "mix rotate" ,"lookup" ,TRUE        ,2   , 63.521   , 64.840 , 66.583   ,
+    "sum"        ,"lookup" ,TRUE        ,4   , 3.1764   , 3.2077 , 3.2435   ,
+    "sum"        ,"match"  ,TRUE        ,4   , 7.3389   , 7.4401 , 7.5533   ,
+    "mix"        ,"match"  ,TRUE        ,4   , 53.561   , 54.181 , 54.845   ,
+    "mix rotate" ,"match"  ,TRUE        ,4   , 109.82   , 110.65 , 111.55   ,
+    "mix"        ,"lookup" ,TRUE        ,4   , 33.618   , 34.037 , 34.591   ,
+    "mix rotate" ,"lookup" ,TRUE        ,4   , 62.356   , 62.961 , 63.720   ,
+    "sum"        ,"lookup" ,TRUE        ,8   , 3.1986   , 3.2334 , 3.2713   ,
+    "sum"        ,"match"  ,TRUE        ,8   , 7.3258   , 7.4137 , 7.5058   ,
+    "mix"        ,"match"  ,TRUE        ,8   , 53.295   , 53.788 , 54.322   ,
+    "mix rotate" ,"match"  ,TRUE        ,8   , 111.32   , 112.71 , 114.33   ,
+    "mix"        ,"lookup" ,TRUE        ,8   , 34.309   , 34.774 , 35.293   ,
+    "mix rotate" ,"lookup" ,TRUE        ,8   , 62.776   , 63.483 , 64.254
+
+
+
+    
+    
+) %>% mutate(task = factor(task, levels = c("sum", "mix", "mix rotate"))
            , f = factor(f)
-           , n = factor(n)
-           , is_inline = is_inline == "inline")
+           , n = factor(n))
 
 
 ggplot(d, aes(n, v
